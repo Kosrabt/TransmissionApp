@@ -1,0 +1,8 @@
+C:\play\TransmissionApp\src\TransmissionApp.Api\bin\Debug\netcoreapp2.0\TransmissionApp.Api.deps.json
+C:\play\TransmissionApp\src\TransmissionApp.Api\bin\Debug\netcoreapp2.0\TransmissionApp.Api.runtimeconfig.json
+C:\play\TransmissionApp\src\TransmissionApp.Api\bin\Debug\netcoreapp2.0\TransmissionApp.Api.runtimeconfig.dev.json
+C:\play\TransmissionApp\src\TransmissionApp.Api\bin\Debug\netcoreapp2.0\TransmissionApp.Api.dll
+C:\play\TransmissionApp\src\TransmissionApp.Api\obj\Debug\netcoreapp2.0\TransmissionApp.Api.csproj.CoreCompileInputs.cache
+C:\play\TransmissionApp\src\TransmissionApp.Api\obj\Debug\netcoreapp2.0\TransmissionApp.Api.AssemblyInfoInputs.cache
+C:\play\TransmissionApp\src\TransmissionApp.Api\obj\Debug\netcoreapp2.0\TransmissionApp.Api.AssemblyInfo.cs
+C:\play\TransmissionApp\src\TransmissionApp.Api\obj\Debug\netcoreapp2.0\TransmissionApp.Api.csprojResolveAssemblyReference.cache
