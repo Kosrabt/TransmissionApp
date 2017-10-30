@@ -9,7 +9,7 @@ namespace TransmissionApp.Business.Logic.Configuration
 {
     public class ConfigurationManager
     {
-        private const string DefaultConfigFileLocation = "transmissionrss-config/rssjobs.json";
+        private const string DefaultConfigFileLocation = "./transmissionrss-config/rssjobs.json";
         private readonly AppConfiguration appConfiguration;
         public string FileLocation => appConfiguration?.ConfigFileLocation ?? DefaultConfigFileLocation;
 
@@ -39,18 +39,26 @@ namespace TransmissionApp.Business.Logic.Configuration
                 }
             }
             else
-            {
-                WriteConfiguration();
+            {               
+                WriteConfiguration(rssClientConfiguration);
             }
             return rssClientConfiguration;
         }
 
-        public void WriteConfiguration()
+        public void WriteConfiguration(ClientConfiguration _config = null)
         {
+           
+            ClientConfiguration config =_config??clientConfiguration;
+            var directory = Path.GetDirectoryName(FileLocation);
+            if (!Directory.Exists(directory))
+            {
+                Directory.CreateDirectory(directory);
+            }
+
             using (StreamWriter file = File.CreateText(FileLocation))
             {
                 JsonSerializer serializer = new JsonSerializer();
-                serializer.Serialize(file, clientConfiguration);
+                serializer.Serialize(file, config);
             }
         }
 
@@ -81,7 +89,7 @@ namespace TransmissionApp.Business.Logic.Configuration
             var newRules = job.Rules.ToList();
             newRules.Add(ruleConfiguration);
             job.Rules = newRules;
-            WriteConfiguration();
+            WriteConfiguration();           
         }
 
         public void DeleteRule(string jobId, string ruleId)

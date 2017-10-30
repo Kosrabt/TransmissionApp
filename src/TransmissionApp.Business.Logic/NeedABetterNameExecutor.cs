@@ -1,29 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
-using Microsoft.Extensions.Options;
-using TransmissionApp.Business.Logic.Configuration;
-using TransmissionApp.Business.Logic.Configuration.Models;
 using TransmissionApp.Business.Logic.Rss;
-using TransmissionApp.Business.Contracts;
 using TransmissionApp.Business.Logic.Processing;
 using System.Linq;
+using TransmissionApp.Business.Logic.Models;
 
 namespace TransmissionApp.Business.Logic
 {
-    public class NeedABetterNameManager
+    public class NeedABetterNameExecutor
     {
-        ConfigurationManager configurationManager = null;
+        NeedABetterNameConfigurator configurator;
 
-        public NeedABetterNameManager(IOptions<AppConfiguration> appConfigurationAccessor)
+        public NeedABetterNameExecutor(NeedABetterNameConfigurator configurator)
         {
-            configurationManager = new ConfigurationManager(appConfigurationAccessor.Value);
+            this.configurator = configurator;
         }
 
         public void Execute()
         {
             var items = GetItemsToBeManaged();
-            AddItemsToTorrent(items.Where(x=>x.State==Contracts.Enums.ItemsState.ToAdd));
-            RemoveItemsFromTorrent(items.Where(x => x.State == Contracts.Enums.ItemsState.ToRemove));
+            AddItemsToTorrent(items.Where(x=>x.State==ItemsState.ToAdd));
+            RemoveItemsFromTorrent(items.Where(x => x.State == ItemsState.ToRemove));
         }
 
         private void AddItemsToTorrent(IEnumerable<ManagedItem> items)
@@ -39,7 +36,8 @@ namespace TransmissionApp.Business.Logic
         public IEnumerable<ResolvedRssItem> GetItemsFromRss()
         {
             List<ResolvedRssItem> items = new List<ResolvedRssItem>();
-            foreach (var job in configurationManager.ClientConfiguration.Jobs)
+            var clientConfiguration = configurator.GetClientConfiguration();
+            foreach (var job in clientConfiguration.Jobs)
             {
                 var rssItems = RssReader.GetRssObject(job.RssUrl);
                 items.AddRange(RssItemResolver.ResolveRssItems(job, rssItems));
@@ -64,7 +62,7 @@ namespace TransmissionApp.Business.Logic
                     Description = x.Description,
                     Path = x.DownloadPath,
                     Link = x.Link,
-                    State = Contracts.Enums.ItemsState.ToAdd
+                    State = ItemsState.ToAdd
                 })
                 .ToList();
             var toRemove = inTorrent.Where(x => !inRss.Any(t => t.Title == x.Title))
@@ -74,7 +72,7 @@ namespace TransmissionApp.Business.Logic
                     Description = "",
                     Path = x.Path,
                     Link = "",
-                    State = Contracts.Enums.ItemsState.ToRemove
+                    State = ItemsState.ToRemove
                 })
                 .ToList();
 

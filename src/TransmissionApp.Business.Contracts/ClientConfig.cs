@@ -4,7 +4,12 @@ using System.Text;
 
 namespace TransmissionApp.Business.Contracts
 {
-    class ClientConfig
+    public class ClientConfig
     {
+        public int RefreshTime;
+        public string TransmissionUrl;
+        public int TransmissionPort;
+
+        public IEnumerable<JobConfig> Jobs;
     }
 }

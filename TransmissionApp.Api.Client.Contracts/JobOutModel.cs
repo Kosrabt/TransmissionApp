@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace TransmissionApp.Business.Contracts
+namespace TransmissionApp.Api.Client.Contracts
 {
-    public class JobConfig
+    public class JobOutModel
     {
         public string Id;
         public string Name;
         public string RssUrl;
         public string DownloadPath;
-        public IEnumerable<RuleConfig> Rules;
+        public IEnumerable<RuleOutModel> Rules;
     }
 }

@@ -6,3 +6,10 @@ C:\play\TransmissionApp\src\TransmissionApp.Api\obj\Debug\netcoreapp2.0\Transmis
 C:\play\TransmissionApp\src\TransmissionApp.Api\obj\Debug\netcoreapp2.0\TransmissionApp.Api.AssemblyInfoInputs.cache
 C:\play\TransmissionApp\src\TransmissionApp.Api\obj\Debug\netcoreapp2.0\TransmissionApp.Api.AssemblyInfo.cs
 C:\play\TransmissionApp\src\TransmissionApp.Api\obj\Debug\netcoreapp2.0\TransmissionApp.Api.csprojResolveAssemblyReference.cache
+C:\play\TransmissionApp\src\TransmissionApp.Api\bin\Debug\netcoreapp2.0\TransmissionApp.Api.pdb
+C:\play\TransmissionApp\src\TransmissionApp.Api\obj\Debug\netcoreapp2.0\TransmissionApp.Api.dll
+C:\play\TransmissionApp\src\TransmissionApp.Api\obj\Debug\netcoreapp2.0\TransmissionApp.Api.pdb
+C:\play\TransmissionApp\src\TransmissionApp.Api\bin\Debug\netcoreapp2.0\TransmissionApp.Business.Logic.dll
+C:\play\TransmissionApp\src\TransmissionApp.Api\bin\Debug\netcoreapp2.0\TransmissionApp.Business.Logic.pdb
+C:\play\TransmissionApp\src\TransmissionApp.Api\bin\Debug\netcoreapp2.0\TransmissionApp.Api.Client.Contracts.dll
+C:\play\TransmissionApp\src\TransmissionApp.Api\bin\Debug\netcoreapp2.0\TransmissionApp.Api.Client.Contracts.pdb

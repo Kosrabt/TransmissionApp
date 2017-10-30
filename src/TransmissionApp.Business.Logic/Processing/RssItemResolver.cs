@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using TransmissionApp.Business.Contracts;
 using TransmissionApp.Business.Logic.Configuration.Models;
+using TransmissionApp.Business.Logic.Models;
 using TransmissionApp.Business.Logic.Rss.Models;
 
 namespace TransmissionApp.Business.Logic.Processing
