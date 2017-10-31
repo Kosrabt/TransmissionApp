@@ -2,6 +2,7 @@
 using AutoMapper;
 using TransmissionApp.Business.Logic.Configuration.Models;
 using TransmissionApp.Api.Client.Contracts;
+using TransmissionApp.Business.Logic.Models;
 
 namespace TransmissionApp.Api
 {
@@ -16,6 +17,7 @@ namespace TransmissionApp.Api
             CreateMap<JobConfiguration, JobOutModel>().ForMember(dest => dest.Rules, cfg => cfg.MapFrom(s => s.Rules));
             CreateMap<RuleConfiguration, RuleOutModel>();
 
+            CreateMap<ResolvedRssItem, TestRssItemModel>();
         }
     }
 }

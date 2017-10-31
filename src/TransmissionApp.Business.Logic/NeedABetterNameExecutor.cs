@@ -4,6 +4,7 @@ using TransmissionApp.Business.Logic.Rss;
 using TransmissionApp.Business.Logic.Processing;
 using System.Linq;
 using TransmissionApp.Business.Logic.Models;
+using TransmissionApp.Business.Logic.Configuration.Models;
 
 namespace TransmissionApp.Business.Logic
 {
@@ -33,26 +34,31 @@ namespace TransmissionApp.Business.Logic
             throw new NotImplementedException();
         }
 
-        public IEnumerable<ResolvedRssItem> GetItemsFromRss()
-        {
-            List<ResolvedRssItem> items = new List<ResolvedRssItem>();
-            var clientConfiguration = configurator.GetClientConfiguration();
-            foreach (var job in clientConfiguration.Jobs)
-            {
-                var rssItems = RssReader.GetRssObject(job.RssUrl);
-                items.AddRange(RssItemResolver.ResolveRssItems(job, rssItems));
-            }
-            return items;
-        }
-
         public IEnumerable<TorrentItem> GetRunningTorrents()
         {
             return new List<TorrentItem>();
         }
 
+        public IEnumerable<ResolvedRssItem> GetItemsFromRssCollection()
+        {
+            List<ResolvedRssItem> items = new List<ResolvedRssItem>();
+            var clientConfiguration = configurator.GetClientConfiguration();
+            foreach (var job in clientConfiguration.Jobs)
+            {                
+                items.AddRange(GetItemFromRss(job));
+            }
+            return items;
+        }
+
+        public IEnumerable<ResolvedRssItem> GetItemFromRss(JobConfiguration job)
+        {
+            var rssItems = RssReader.GetRssObject(job.RssUrl);
+            return RssItemResolver.ResolveRssItems(job, rssItems);
+        }
+
         public IEnumerable<ManagedItem> GetItemsToBeManaged()
         {
-            var inRss = GetItemsFromRss();
+            var inRss = GetItemsFromRssCollection();
             var inTorrent = GetRunningTorrents();
 
             var toAdd = inRss.Where(x => !inTorrent.Any(t => t.Title == x.Title))

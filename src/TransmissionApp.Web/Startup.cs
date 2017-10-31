@@ -21,7 +21,7 @@ namespace TransmissionApp.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.Configure<AppConfig>(Configuration.GetSection("Api"));
-            services.AddTransient<ApiClient>();
+            services.AddTransient<ApiClient>();            
             services.AddMvc();
             services.AddAutoMapper();
         }
