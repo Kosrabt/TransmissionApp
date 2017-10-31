@@ -26,9 +26,7 @@ namespace TransmissionApp.Business.Logic
 
         public void SetClientConfiguration(ClientConfiguration clientConfiguration)
         {
-            var oldJobs = configurationManager.ClientConfiguration.Jobs;
-            configurationManager.ClientConfiguration = clientConfiguration;
-            configurationManager.ClientConfiguration.Jobs = oldJobs;
+            configurationManager.UpdateSettings(clientConfiguration);
         }
 
         public JobConfiguration GetJob(string id)

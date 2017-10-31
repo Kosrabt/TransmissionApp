@@ -6,10 +6,10 @@ namespace TransmissionApp.Api.Client.Contracts
 {
     public class JobOutModel
     {
-        public string Id;
-        public string Name;
-        public string RssUrl;
-        public string DownloadPath;
-        public IEnumerable<RuleOutModel> Rules;
+        public string Id { get; set; }
+        public string Name { get; set; }
+        public string RssUrl { get; set; }
+        public string DownloadPath { get; set; }
+        public IEnumerable<RuleOutModel> Rules { get; set; }
     }
 }

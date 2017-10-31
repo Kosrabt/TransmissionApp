@@ -7,13 +7,13 @@ namespace TransmissionApp.Api.Client.Contracts
 {
     public class JobInModel
     {
-        public string Id;
+        public string Id { get; set; }
         [Required]
-        public string Name;
+        public string Name { get; set; }
         [Required]
         [DataType(DataType.Url)]
-        public string RssUrl;
+        public string RssUrl { get; set; }
         [Required]
-        public string DownloadPath;
+        public string DownloadPath { get; set; }
     }
 }

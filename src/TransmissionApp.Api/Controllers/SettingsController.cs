@@ -35,13 +35,26 @@ namespace TransmissionApp.Api.Controllers
             return Ok(settings);
         }
 
-       
+
 
         // Put api/values
         [HttpPut]
         [SwaggerResponse(200)]
-        public IActionResult Put([FromBody]SettingsInModel vm)
+        [SwaggerResponse((int)HttpStatusCode.BadRequest)]
+        public IActionResult Put([FromBody]SettingsInModel value)
         {
+            if (String.IsNullOrEmpty(value.TransmissionUrl))
+                return BadRequest("You have to provide an transmission url");
+            if (value.RefreshTime < 0)
+                return BadRequest("Refresh time has to be more than 0");
+            if (value.TransmissionPort < 0 || 65535 < value.TransmissionPort )
+                return BadRequest("Transmission Port has to be valid");
+
+            var config = configurator.GetClientConfiguration();
+            config.RefreshTime = value.RefreshTime;
+            config.TransmissionPort = value.TransmissionPort;
+            config.TransmissionUrl = value.TransmissionUrl;
+            configurator.SetClientConfiguration(config);
 
             return Ok();
         }

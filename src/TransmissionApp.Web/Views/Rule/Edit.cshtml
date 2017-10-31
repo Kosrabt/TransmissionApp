@@ -1,0 +1,30 @@
+﻿@model TransmissionApp.Web.ViewModels.Rules.RuleViewModel
+@{
+    ViewData["Title"] = "Rule edit";
+}
+
+<div class="row">
+    <div class="col">
+        <form asp-action="Edit" asp-controller="Rule" method="post">
+            <input asp-for="@Model.JobId" type="hidden" />
+            <input asp-for="@Model.Id" type="hidden" />
+            <div class="form-group">
+                <a asp-action="Edit" asp-controller="Job" asp-route-id="@Model.JobId" class="btn btn-info">Back</a>             
+            </div>
+            <div class="form-group">
+                <label for="tbName">Regex: </label>
+                <input asp-for="@Model.Regex" type="text" class="form-control" id="tbRegex" placeholder="Regex">
+            </div>
+            <div class="form-group">
+                <label for="tbJobRssUrl">Path:</label>
+                <input asp-for="@Model.Path" type="text" class="form-control" id="tbPath" placeholder="Path">
+            </div>      
+            <div class="form-group">
+                <label for="tbJobRssUrl">Priority (Higher better):</label>
+                <input asp-for="@Model.Priority" type="number" class="form-control" id="tbPriority" placeholder="Priority">                
+            </div>
+            <button type="submit" class="btn btn-primary">Save</button>
+            <a asp-action="Delete" asp-route-id="@Model.Id" asp-route-jobId="@Model.JobId" class="btn btn-danger">Delete</a>
+        </form>
+    </div>
+</div>

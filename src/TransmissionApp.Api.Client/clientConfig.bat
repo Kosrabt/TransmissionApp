@@ -1,0 +1,1 @@
+AutoRest -Namespace TransmissionApp.Api.Client -CodeGenerator CSharp -Modeler Swagger -Input http://localhost:64936/swagger/v1/swagger.json -PackageName Client

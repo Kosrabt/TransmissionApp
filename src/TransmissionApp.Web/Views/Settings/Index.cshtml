@@ -1,0 +1,38 @@
+﻿@model TransmissionApp.Web.ViewModels.Settings.IndexViewModel
+@{
+
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="row">
+
+    @if (Model == null)
+    {
+        <span>Nem sikerült a konfigurációs fájlt betölteni.</span>
+    }
+    else
+    {
+        <div class="col">
+            <form asp-action="Index" asp-controller="Settings" method="post">
+                <div class="form-group">
+                    <label for="tbTransmissionUrl">Transmission url:</label>
+                    <input asp-for="@Model.TransmissionUrl" type="url" class="form-control" id="tbTransmissionUrl" aria-describedby="tbTransmissionHelp" placeholder="Transmission url">
+                    <small id="tbTransmissionHelp" class="form-text text-muted">http://192.168.0.150</small>
+                </div>
+                <div class="form-group">
+                    <label for="tbTransmissionPort">Transmission port:</label>
+                    <input asp-for="@Model.TransmissionPort" type="number" class="form-control" id="tbTransmissionPort" placeholder="Pl: 9091">
+                </div>
+                <div class="form-group">
+                    <label for="tbRss">Refresh time:</label>
+                    <input asp-for="@Model.RefreshTime" type="number" class="form-control" id="tbRss" placeholder="600">
+                    <small id="tbRss" class="form-text text-muted">refresh time in ms</small>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Save</button>
+            </form>
+
+        </div>
+    }
+
+</div>

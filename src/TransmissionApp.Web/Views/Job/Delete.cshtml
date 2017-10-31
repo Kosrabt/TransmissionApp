@@ -1,0 +1,30 @@
+﻿@model TransmissionApp.Web.ViewModels.Jobs.JobViewModel
+
+@{
+}
+
+<div class="row">
+    <div class="col">
+        <form asp-action="Delete" asp-controller="Job" method="post">
+            <h2>Delete Job</h2>
+            <div class="form-group">
+                <label for="lbJobId">Id:</label>
+                <input asp-for="@Model.Id" readonly  class="text-muted form-control" />
+            </div>
+            <div class="form-group">
+                <label for="tbName">Name: </label>
+                <input asp-for="@Model.Name" type="text" readonly class="form-control" id="tbName" placeholder="Name">
+            </div>
+            <div class="form-group">
+                <label for="tbJobRssUrl">Rss url:</label>
+                <input asp-for="@Model.RssUrl" type="text" readonly class="form-control" id="tbJobRssUrl">
+            </div>
+            <div class="form-group">
+                <label for="tbJobDownloadPath">Download path:</label>
+                <input asp-for="@Model.DownloadPath" type="text" readonly class="form-control" id="tbJobDownloadPath">
+            </div>
+            <button type="submit" class="btn btn-primary">Delete</button>          
+        </form>
+      
+    </div>
+</div>

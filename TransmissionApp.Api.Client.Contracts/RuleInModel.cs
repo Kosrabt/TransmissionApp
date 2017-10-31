@@ -7,12 +7,12 @@ namespace TransmissionApp.Api.Client.Contracts
 {
     public class RuleInModel
     {
-        public string Id;
+        public string Id { get; set; }
         [Required]
-        public string Regex;
+        public string Regex { get; set; }
         [Required]
-        public string Path;
+        public string Path { get; set; }
         [Required]
-        public int Priority;
+        public int Priority { get; set; }
     }
 }

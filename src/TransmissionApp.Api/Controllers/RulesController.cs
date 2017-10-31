@@ -14,7 +14,7 @@ using TransmissionApp.Business.Logic.Configuration.Models;
 
 namespace TransmissionApp.Api.Controllers
 {
-    [Route("api/Jobs/{jobid}/[controller]")]
+    [Route("api/[controller]")]
     public class RulesController : Controller
     {
         // GET: api/values
@@ -41,7 +41,7 @@ namespace TransmissionApp.Api.Controllers
         // GET api/values/5
         [HttpGet("{id}")]
         [SwaggerResponse((int)HttpStatusCode.OK, Type = typeof(RuleOutModel))]
-        public IActionResult GetById(string jobId, string id)
+        public IActionResult GetById( string id,string jobId)
         {
             var rule = configurator.GetRule(jobId, id);
             return Ok(mapper.Map<RuleOutModel>(rule));

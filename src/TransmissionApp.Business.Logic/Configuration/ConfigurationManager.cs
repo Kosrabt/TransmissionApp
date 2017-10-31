@@ -62,6 +62,14 @@ namespace TransmissionApp.Business.Logic.Configuration
             }
         }
 
+        public void UpdateSettings(ClientConfiguration config)
+        {
+            var oldJobs = clientConfiguration.Jobs;
+            clientConfiguration = config;
+            clientConfiguration.Jobs = oldJobs;
+            WriteConfiguration();
+        }
+
         public void AddJob(JobConfiguration jobConfiguration)
         {
             var jobs = ClientConfiguration.Jobs.ToList();

@@ -1,0 +1,60 @@
+﻿@model TransmissionApp.Web.ViewModels.Jobs.JobViewModel
+
+@{
+}
+
+<div class="row">
+    <div class="col">
+        <form asp-action="Edit" asp-controller="Job" method="post">
+            <div class="form-group">
+                <a asp-action="Index" asp-controller="Job" class="btn btn-info">Back</a>
+                <a asp-action="TestRss" asp-controller="Job" asp-route-id="@Model.Id" class="btn btn-success">Test Rss content</a>
+                <input asp-for="@Model.Id" type="hidden">
+            </div>
+            <div class="form-group">
+                <label for="tbName">Name: </label>
+                <input asp-for="@Model.Name" type="text" class="form-control" id="tbName" placeholder="Name">
+            </div>
+            <div class="form-group">
+                <label for="tbJobRssUrl">Rss url:</label>
+                <input asp-for="@Model.RssUrl" type="text" class="form-control" id="tbJobRssUrl">
+            </div>
+            <div class="form-group">
+                <label for="tbJobDownloadPath">Download path:</label>
+                <input asp-for="@Model.DownloadPath" type="text" class="form-control" id="tbJobDownloadPath">
+            </div>
+
+            @if (Model.Rules != null)
+            {
+
+            <table class="table table-responsive">
+                <thead>
+                    <tr>
+                        <th>Priority</th>
+                        <th>Regex</th>
+                        <th>Path</th>
+                        <th class=""><a asp-action="Edit" asp-controller="Rule" asp-route-jobid="@Model.Id" class="btn btn-success">Add</a></th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @foreach (var item in Model.Rules.OrderByDescending(x => x.Priority))
+                    {
+                        <tr>
+                            <td>@item.Priority</td>
+                            <td>@item.Regex</td>
+                            <td>@item.Path</td>
+                            <td><a asp-action="Edit" asp-controller="Rule" asp-route-jobid="@Model.Id" asp-route-id="@item.Id" class="btn btn-outline-info">Edit</a></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+            }
+            <button type="submit" class="btn btn-primary">Save</button>
+            <a asp-action="Delete" asp-controller="Job" asp-route-id="@Model.Id" class="btn btn-danger">Delete</a>
+
+        </form>
+
+    </div>
+</div>
