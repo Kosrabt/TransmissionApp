@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\TransmissionApp.Api.Client.Contracts\TransmissionApp.Api.Client.Contracts.csproj" />
+    <ProjectReference Include="..\TransmissionApp.Api.Client.Contracts\TransmissionApp.Api.Client.Contracts.csproj" />
     <ProjectReference Include="..\TransmissionApp.Business.Logic\TransmissionApp.Business.Logic.csproj" />
   </ItemGroup>
 
