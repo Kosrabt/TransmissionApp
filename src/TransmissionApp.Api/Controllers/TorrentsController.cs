@@ -3,6 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using TransmissionApp.Business.Logic;
+using AutoMapper;
+using Transmission.API.RPC;
+using Transmission.API.RPC.Entity;
+using TransmissionApp.TorrentClients;
+using TransmissionApp.TorrentClients.TransmissionClient;
+using TransmissionApp.TorrentClients.Models;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -11,11 +18,23 @@ namespace TransmissionApp.Api.Controllers
     [Route("api/[controller]")]
     public class TorrentsController : Controller
     {
+        NeedABetterNameConfigurator configurator;
+        IMapper mapper;
+        RpcClient client;
+
+        public TorrentsController(NeedABetterNameConfigurator configurator, IMapper mapper)
+        {
+            this.configurator = configurator;
+            this.mapper = mapper;
+            var clientConfig = configurator.GetClientConfiguration();
+            client = new RpcClient(clientConfig.TransmissionUrl, "kodi", "kodi");
+        }
+
         // GET: api/values
         [HttpGet]
-        public IEnumerable<string> Get()
+        public AllTorrents Get()
         {
-            return new string[] { "value1", "value2" };
+            return client.TorrentGet();
         }
 
         // GET api/values/5

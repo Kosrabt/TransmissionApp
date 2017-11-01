@@ -16,6 +16,7 @@
     <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="1.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="1.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUi" Version="1.0.0" />
+    <PackageReference Include="Transmission.API.RPC" Version="1.2.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -25,6 +26,7 @@
   <ItemGroup>
     <ProjectReference Include="..\TransmissionApp.Api.Client.Contracts\TransmissionApp.Api.Client.Contracts.csproj" />
     <ProjectReference Include="..\TransmissionApp.Business.Logic\TransmissionApp.Business.Logic.csproj" />
+    <ProjectReference Include="..\TransmissionApp.TorrentClients\TransmissionApp.TorrentClients.csproj" />
   </ItemGroup>
 
 </Project>

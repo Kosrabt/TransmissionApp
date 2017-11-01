@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TransmissionApp.Web", "src\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TransmissionApp.Api.Client.Contracts", "src\TransmissionApp.Api.Client.Contracts\TransmissionApp.Api.Client.Contracts.csproj", "{C356BF60-8ABF-4941-BA63-ABA9F9DB37E1}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TransmissionApp.TorrentClients", "src\TransmissionApp.TorrentClients\TransmissionApp.TorrentClients.csproj", "{F58E1336-933E-439D-8429-CA992BFA971D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -83,6 +85,18 @@ Global
 		{C356BF60-8ABF-4941-BA63-ABA9F9DB37E1}.Release|x64.Build.0 = Release|Any CPU
 		{C356BF60-8ABF-4941-BA63-ABA9F9DB37E1}.Release|x86.ActiveCfg = Release|Any CPU
 		{C356BF60-8ABF-4941-BA63-ABA9F9DB37E1}.Release|x86.Build.0 = Release|Any CPU
+		{F58E1336-933E-439D-8429-CA992BFA971D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F58E1336-933E-439D-8429-CA992BFA971D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F58E1336-933E-439D-8429-CA992BFA971D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F58E1336-933E-439D-8429-CA992BFA971D}.Debug|x64.Build.0 = Debug|Any CPU
+		{F58E1336-933E-439D-8429-CA992BFA971D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F58E1336-933E-439D-8429-CA992BFA971D}.Debug|x86.Build.0 = Debug|Any CPU
+		{F58E1336-933E-439D-8429-CA992BFA971D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F58E1336-933E-439D-8429-CA992BFA971D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F58E1336-933E-439D-8429-CA992BFA971D}.Release|x64.ActiveCfg = Release|Any CPU
+		{F58E1336-933E-439D-8429-CA992BFA971D}.Release|x64.Build.0 = Release|Any CPU
+		{F58E1336-933E-439D-8429-CA992BFA971D}.Release|x86.ActiveCfg = Release|Any CPU
+		{F58E1336-933E-439D-8429-CA992BFA971D}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

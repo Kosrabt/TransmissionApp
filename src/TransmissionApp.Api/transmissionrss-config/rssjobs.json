@@ -1,0 +1,27 @@
+{
+  "RefreshTime": 100,
+  "TransmissionUrl": "http://kodi.lan:9091/transmission/rpc",
+  "TransmissionPort": 9091,
+  "Jobs": [
+    {
+      "Rules": [
+        {
+          "Id": "051169fd-a10b-4da4-bb9b-d704bc34ad4f",
+          "Regex": "(?<title>.*?).S(?<series>\\d+)E(?<episode>\\d+).*?\\[(?<folder>\\w+)\\s\\(.*?\\)\\]",
+          "Path": "/{folder}/{title}/S{series}/",
+          "Priority": 0
+        },
+        {
+          "Id": "d6b0e591-9124-44b9-b288-4b248accf33c",
+          "Regex": ".*?\\[(?<folder>.*?)\\s\\(.*?\\)\\]",
+          "Path": "/{folder}/",
+          "Priority": -1
+        }
+      ],
+      "Id": "d7eadd0e-9e03-4123-8b01-f7039066b643",
+      "Name": "Sorozatok",
+      "RssUrl": "https://ncore.cc/bookmarks/64e1e907dfa59748d304d337bae6645c93740",
+      "DownloadPath": "/var/media/STORAGE"
+    }
+  ]
+}

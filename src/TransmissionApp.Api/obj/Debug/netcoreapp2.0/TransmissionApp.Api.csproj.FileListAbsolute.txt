@@ -28,3 +28,5 @@ D:\Company\Studio\TransmissionApp\src\TransmissionApp.Api\obj\Debug\netcoreapp2.
 D:\Company\Studio\TransmissionApp\src\TransmissionApp.Api\obj\Debug\netcoreapp2.0\TransmissionApp.Api.AssemblyInfo.cs
 D:\Company\Studio\TransmissionApp\src\TransmissionApp.Api\obj\Debug\netcoreapp2.0\TransmissionApp.Api.dll
 D:\Company\Studio\TransmissionApp\src\TransmissionApp.Api\obj\Debug\netcoreapp2.0\TransmissionApp.Api.pdb
+D:\Company\Studio\TransmissionApp\src\TransmissionApp.Api\bin\Debug\netcoreapp2.0\TransmissionApp.TorrentClients.dll
+D:\Company\Studio\TransmissionApp\src\TransmissionApp.Api\bin\Debug\netcoreapp2.0\TransmissionApp.TorrentClients.pdb
