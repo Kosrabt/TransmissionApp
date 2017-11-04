@@ -50,12 +50,10 @@ namespace TransmissionApp.Business.Logic
             foreach (var item in items)
             {
                 Debugger.Log(1, "Torrent", $"Item remove: {item.Path}");
-                NewTorrent torrent = new NewTorrent()
-                {
-                    Filename = item.Link,
-                    DownloadDirectory = item.Path
-                };
-               // client.TorrentAddAsync(torrent);
+            }
+            if (configurator.GetClientConfiguration().DeleteFromTorrentClient)
+            {
+                client.TorrentRemoveAsync(items.Select(x => x.TorrentId).ToArray());
             }
         }
 
@@ -87,7 +85,7 @@ namespace TransmissionApp.Business.Logic
             var inRss = GetItemsFromRssCollection();
             var inTorrent = GetRunningTorrents();
 
-            var toAdd = inRss.Where(x => !inTorrent.Any(t => t.Name == x.Title))
+            var toAdd = inRss.Where(x => !inTorrent.Any(t => t.Name == x.Description))
                 .Select(x => new ManagedItem()
                 {
                     TorrentId = 0,
@@ -99,7 +97,7 @@ namespace TransmissionApp.Business.Logic
                 })
                 .ToList();
 
-            var toRemove = inTorrent.Where(x => !inRss.Any(t => t.Title == x.Name))
+            var toRemove = inTorrent.Where(x => !inRss.Any(t => t.Description == x.Name))
                 .Select(x => new ManagedItem()
                 {
                     TorrentId = x.ID,

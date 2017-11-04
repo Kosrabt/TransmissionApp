@@ -41,11 +41,12 @@ namespace TransmissionApp.Api.Controllers
 
         // GET: api/values
         [HttpGet]
-        [SwaggerResponse((int)HttpStatusCode.OK, Type = typeof(IEnumerable<ManagedItem>))]
+        [SwaggerResponse((int)HttpStatusCode.OK, Type = typeof(int))]
         public IActionResult Execute()
         {
-           var items = executor.Execute();
-            return Ok(items);
+            executor.Execute();
+            var delay = configurator.GetClientConfiguration().RefreshTime;
+            return Ok(delay);
         }
 
     }

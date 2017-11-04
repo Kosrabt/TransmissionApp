@@ -20,6 +20,28 @@ namespace TransmissionApp.Api.Client
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
+            public static int? ApiExecutionGet(this ITransmissionApp operations)
+            {
+                return operations.ApiExecutionGetAsync().GetAwaiter().GetResult();
+            }
+
+            /// <param name='operations'>
+            /// The operations group for this extension method.
+            /// </param>
+            /// <param name='cancellationToken'>
+            /// The cancellation token.
+            /// </param>
+            public static async Task<int?> ApiExecutionGetAsync(this ITransmissionApp operations, CancellationToken cancellationToken = default(CancellationToken))
+            {
+                using (var _result = await operations.ApiExecutionGetWithHttpMessagesAsync(null, cancellationToken).ConfigureAwait(false))
+                {
+                    return _result.Body;
+                }
+            }
+
+            /// <param name='operations'>
+            /// The operations group for this extension method.
+            /// </param>
             public static IList<JobOutModel> ApiJobsGet(this ITransmissionApp operations)
             {
                 return operations.ApiJobsGetAsync().GetAwaiter().GetResult();
@@ -339,7 +361,7 @@ namespace TransmissionApp.Api.Client
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
-            public static IList<string> ApiTorrentsGet(this ITransmissionApp operations)
+            public static AllTorrents ApiTorrentsGet(this ITransmissionApp operations)
             {
                 return operations.ApiTorrentsGetAsync().GetAwaiter().GetResult();
             }
@@ -350,7 +372,7 @@ namespace TransmissionApp.Api.Client
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<IList<string>> ApiTorrentsGetAsync(this ITransmissionApp operations, CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<AllTorrents> ApiTorrentsGetAsync(this ITransmissionApp operations, CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.ApiTorrentsGetWithHttpMessagesAsync(null, cancellationToken).ConfigureAwait(false))
                 {

@@ -11,6 +11,7 @@ namespace TransmissionApp.Business.Logic.Configuration.Models
         public int TransmissionPort = 9091;
         public string Password = "kodi";
         public string Login = "kodi";
+        public bool DeleteFromTorrentClient = true;
 
         public IEnumerable<JobConfiguration> Jobs = new List<JobConfiguration>();
     }

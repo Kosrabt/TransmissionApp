@@ -18,6 +18,8 @@ namespace TransmissionApp.Api
             CreateMap<RuleConfiguration, RuleOutModel>();
 
             CreateMap<ResolvedRssItem, TestRssItemModel>();
+
+            CreateMap<ManagedItem, TestOutModel>().ForMember(dest => dest.StateInt, cfg => cfg.MapFrom(x => (int)x.State));
         }
     }
 }

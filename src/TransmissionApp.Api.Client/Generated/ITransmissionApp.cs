@@ -40,6 +40,14 @@ namespace TransmissionApp.Api.Client
         /// <param name='cancellationToken'>
         /// The cancellation token.
         /// </param>
+        Task<HttpOperationResponse<int?>> ApiExecutionGetWithHttpMessagesAsync(Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <param name='customHeaders'>
+        /// The headers that will be added to request.
+        /// </param>
+        /// <param name='cancellationToken'>
+        /// The cancellation token.
+        /// </param>
         Task<HttpOperationResponse<IList<JobOutModel>>> ApiJobsGetWithHttpMessagesAsync(Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <param name='value'>
@@ -168,7 +176,7 @@ namespace TransmissionApp.Api.Client
         /// <param name='cancellationToken'>
         /// The cancellation token.
         /// </param>
-        Task<HttpOperationResponse<IList<string>>> ApiTorrentsGetWithHttpMessagesAsync(Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<HttpOperationResponse<AllTorrents>> ApiTorrentsGetWithHttpMessagesAsync(Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <param name='value'>
         /// </param>

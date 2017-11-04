@@ -27,7 +27,7 @@ namespace TransmissionApp.Api.Controllers
             this.configurator = configurator;
             this.mapper = mapper;
             var clientConfig = configurator.GetClientConfiguration();
-            client = new RpcClient(clientConfig.TransmissionUrl, "kodi", "kodi");
+            client = new RpcClient(clientConfig.TransmissionUrl, clientConfig.Login, clientConfig.Password);
         }
 
         // GET: api/values
