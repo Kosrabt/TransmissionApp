@@ -1,26 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.CodeAnalysis.Options;
-using Microsoft.Extensions.Options;
 using TransmissionApp.Api.Client;
+using Microsoft.Extensions.Configuration;
 
 namespace TransmissionApp.Web
 {
     public class ApiClient
     {
-        AppConfig config;
-        public ApiClient(IOptions<AppConfig> configAncestor)
+        IConfiguration configuration;
+        public ApiClient(IConfiguration configuration)
         {
-            config = configAncestor.Value;
+            this.configuration = configuration;
         }
 
         public ITransmissionApp GetApiClient()
         {
             return new Api.Client.TransmissionApp()
             {
-                BaseUri = new Uri(config.ApiUrl)
+                BaseUri = new Uri(configuration.GetValue<string>("ApiUrl"))
             };
         }
     }

@@ -1,0 +1,6 @@
+version: '3'
+
+services:
+  transmissionapp.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development   

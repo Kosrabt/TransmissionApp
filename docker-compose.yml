@@ -1,0 +1,34 @@
+version: '3'
+
+services:
+  transmissionapp.web:
+    image: transmissionapp.web
+    container_name: transmissionapp.web
+    build:
+      context: ./src/TransmissionApp.Web
+      dockerfile: Dockerfile
+    ports:
+      - "5000:80"
+    depends_on:
+      - transmissionapp.api
+    environment:
+      - "ApiUrl=http://transmissionapp.api"
+
+  transmissionapp.api:
+    image: transmissionapp.api
+    container_name: transmissionapp.api
+    build:
+      context: ./src/TransmissionApp.Api
+      dockerfile: Dockerfile
+    ports:
+      - "5001:80" 
+
+  transmissionapp.runner:
+    image: transmissionapp.runner
+    build:
+      context: ./src/TransmissionApp.Runner
+      dockerfile: Dockerfile
+    depends_on:
+      - transmissionapp.api
+    environment:
+      - "ApiUrl=http://transmissionapp.api"

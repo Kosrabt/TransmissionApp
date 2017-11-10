@@ -16,12 +16,12 @@ namespace TransmissionApp.Web
 
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+                 .UseUrls("http://*:80;")
                  .ConfigureAppConfiguration((builderContext, config) =>
                  {
-                     IHostingEnvironment env = builderContext.HostingEnvironment;
-
-                     config.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
-                         
+                     IHostingEnvironment env = builderContext.HostingEnvironment;                    
+                    // config.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
+                     config.AddEnvironmentVariables();
                  })
                 .UseStartup<Startup>()
                 .Build();

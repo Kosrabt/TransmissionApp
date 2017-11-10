@@ -14,11 +14,12 @@ namespace TransmissionApp.Api
     {
         public static void Main(string[] args)
         {
-            BuildWebHost(args).Run();
+            BuildWebHost(args) .Run();
         }
 
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+                .UseUrls("http://*:80;")
                 .UseStartup<Startup>()
                 .Build();
     }

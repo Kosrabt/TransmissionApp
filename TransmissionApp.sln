@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2002
+VisualStudioVersion = 15.0.27004.2006
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TransmissionApp.Api", "src\TransmissionApp.Api\TransmissionApp.Api.csproj", "{0F368A23-9F95-477F-A5BF-612C2565FC6C}"
 EndProject
@@ -16,6 +16,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TransmissionApp.TorrentClients", "src\TransmissionApp.TorrentClients\TransmissionApp.TorrentClients.csproj", "{F58E1336-933E-439D-8429-CA992BFA971D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TransmissionApp.Runner", "src\TransmissionApp.Runner\TransmissionApp.Runner.csproj", "{21FEDB0D-8B9E-46E7-87E8-CD52A38B461E}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{95F24762-0098-443A-9149-DAA8DC08AFDD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -111,6 +113,18 @@ Global
 		{21FEDB0D-8B9E-46E7-87E8-CD52A38B461E}.Release|x64.Build.0 = Release|Any CPU
 		{21FEDB0D-8B9E-46E7-87E8-CD52A38B461E}.Release|x86.ActiveCfg = Release|Any CPU
 		{21FEDB0D-8B9E-46E7-87E8-CD52A38B461E}.Release|x86.Build.0 = Release|Any CPU
+		{95F24762-0098-443A-9149-DAA8DC08AFDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95F24762-0098-443A-9149-DAA8DC08AFDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95F24762-0098-443A-9149-DAA8DC08AFDD}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{95F24762-0098-443A-9149-DAA8DC08AFDD}.Debug|x64.Build.0 = Debug|Any CPU
+		{95F24762-0098-443A-9149-DAA8DC08AFDD}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{95F24762-0098-443A-9149-DAA8DC08AFDD}.Debug|x86.Build.0 = Debug|Any CPU
+		{95F24762-0098-443A-9149-DAA8DC08AFDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95F24762-0098-443A-9149-DAA8DC08AFDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95F24762-0098-443A-9149-DAA8DC08AFDD}.Release|x64.ActiveCfg = Release|Any CPU
+		{95F24762-0098-443A-9149-DAA8DC08AFDD}.Release|x64.Build.0 = Release|Any CPU
+		{95F24762-0098-443A-9149-DAA8DC08AFDD}.Release|x86.ActiveCfg = Release|Any CPU
+		{95F24762-0098-443A-9149-DAA8DC08AFDD}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

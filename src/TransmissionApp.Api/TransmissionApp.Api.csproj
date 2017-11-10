@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
+    <DockerComposeProjectPath>..\..\docker-compose.dcproj</DockerComposeProjectPath>
   </PropertyGroup>
 
   <ItemGroup>
@@ -27,6 +28,12 @@
     <ProjectReference Include="..\TransmissionApp.Api.Client.Contracts\TransmissionApp.Api.Client.Contracts.csproj" />
     <ProjectReference Include="..\TransmissionApp.Business.Logic\TransmissionApp.Business.Logic.csproj" />
     <ProjectReference Include="..\TransmissionApp.TorrentClients\TransmissionApp.TorrentClients.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="docker-compose.override.yml">
+      <DependentUpon>docker-compose.yml</DependentUpon>
+    </None>
   </ItemGroup>
 
 </Project>

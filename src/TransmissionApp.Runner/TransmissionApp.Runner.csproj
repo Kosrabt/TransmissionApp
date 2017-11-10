@@ -9,4 +9,10 @@
     <ProjectReference Include="..\TransmissionApp.Api.Client\TransmissionApp.Api.Client.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update=".dockerignore">
+      <DependentUpon>Dockerfile</DependentUpon>
+    </None>
+  </ItemGroup>
+
 </Project>

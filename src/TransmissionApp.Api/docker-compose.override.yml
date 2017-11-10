@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  transmissionapp.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "80"
+
+  transmissionapp.web:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "80"

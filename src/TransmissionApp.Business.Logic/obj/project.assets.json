@@ -5872,7 +5872,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\kosrabt\\.nuget\\packages\\": {},
+    "C:\\Users\\publi\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -5881,17 +5881,17 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "D:\\Company\\Studio\\TransmissionApp\\src\\TransmissionApp.Business.Logic\\TransmissionApp.Business.Logic.csproj",
+      "projectUniqueName": "D:\\Development\\TransmissionApp\\src\\TransmissionApp.Business.Logic\\TransmissionApp.Business.Logic.csproj",
       "projectName": "TransmissionApp.Business.Logic",
-      "projectPath": "D:\\Company\\Studio\\TransmissionApp\\src\\TransmissionApp.Business.Logic\\TransmissionApp.Business.Logic.csproj",
-      "packagesPath": "C:\\Users\\kosrabt\\.nuget\\packages\\",
-      "outputPath": "D:\\Company\\Studio\\TransmissionApp\\src\\TransmissionApp.Business.Logic\\obj\\",
+      "projectPath": "D:\\Development\\TransmissionApp\\src\\TransmissionApp.Business.Logic\\TransmissionApp.Business.Logic.csproj",
+      "packagesPath": "C:\\Users\\publi\\.nuget\\packages\\",
+      "outputPath": "D:\\Development\\TransmissionApp\\src\\TransmissionApp.Business.Logic\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\kosrabt\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\publi\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5904,8 +5904,8 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "D:\\Company\\Studio\\TransmissionApp\\src\\TransmissionApp.TorrentClients\\TransmissionApp.TorrentClients.csproj": {
-              "projectPath": "D:\\Company\\Studio\\TransmissionApp\\src\\TransmissionApp.TorrentClients\\TransmissionApp.TorrentClients.csproj"
+            "D:\\Development\\TransmissionApp\\src\\TransmissionApp.TorrentClients\\TransmissionApp.TorrentClients.csproj": {
+              "projectPath": "D:\\Development\\TransmissionApp\\src\\TransmissionApp.TorrentClients\\TransmissionApp.TorrentClients.csproj"
             }
           }
         }

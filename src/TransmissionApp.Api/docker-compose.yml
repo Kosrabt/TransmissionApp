@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  transmissionapp.api:
+    image: transmissionapp.api
+    container_name: transmissionapp.api
+    build:
+      context: ./src/TransmissionApp.Api
+      dockerfile: Dockerfile    
+
+    ports:
+      - "80:5001"  

@@ -11,11 +11,11 @@ namespace TransmissionApp.Runner
     {
         static void Main(string[] args)
         {
-            var apiLink = Environment.GetEnvironmentVariable("TRANSMISSION_API");
+            var apiLink = Environment.GetEnvironmentVariable("ApiUrl");
 
             if (string.IsNullOrWhiteSpace(apiLink))
             {
-                apiLink = "http://localhost:64936";
+                throw new Exception("Missing Api Url");
             }
 
             var cancellationTokenSource = new CancellationTokenSource();
@@ -54,6 +54,6 @@ namespace TransmissionApp.Runner
         private static void AddConsoleMessage(string message)
         {            
             Console.WriteLine($"{DateTime.Now.ToShortTimeString()}: {message}");
-         }
+        }
     }
 }
