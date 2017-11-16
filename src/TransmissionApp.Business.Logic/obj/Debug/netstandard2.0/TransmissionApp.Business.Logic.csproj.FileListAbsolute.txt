@@ -1,6 +1,0 @@
-C:\play\TransmissionApp\src\TransmissionApp.Business.Logic\bin\Debug\netstandard2.0\TransmissionApp.Business.Logic.deps.json
-C:\play\TransmissionApp\src\TransmissionApp.Business.Logic\bin\Debug\netstandard2.0\TransmissionApp.Business.Logic.dll
-C:\play\TransmissionApp\src\TransmissionApp.Business.Logic\obj\Debug\netstandard2.0\TransmissionApp.Business.Logic.csprojResolveAssemblyReference.cache
-C:\play\TransmissionApp\src\TransmissionApp.Business.Logic\obj\Debug\netstandard2.0\TransmissionApp.Business.Logic.csproj.CoreCompileInputs.cache
-C:\play\TransmissionApp\src\TransmissionApp.Business.Logic\obj\Debug\netstandard2.0\TransmissionApp.Business.Logic.AssemblyInfoInputs.cache
-C:\play\TransmissionApp\src\TransmissionApp.Business.Logic\obj\Debug\netstandard2.0\TransmissionApp.Business.Logic.AssemblyInfo.cs
