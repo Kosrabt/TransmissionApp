@@ -8164,7 +8164,7 @@
       ]
     },
     "Newtonsoft.Json/10.0.3": {
-      "sha512": "hSXaFmh7hNCuEoC4XNY5DrRkLDzYHqPx/Ik23R4J86Z7PE/Y6YidhG602dFVdLBRSdG6xp9NabH3dXpcoxWvww==",
+      "sha512": "wBM7i7i3U2WX0ecor4zdVGvgrwFUjuigBoHKiL+nH39fCOpCPjBY3RDqJM32edvdyTAVdjzlccHsg41+/+zpSA==",
       "type": "package",
       "path": "newtonsoft.json/10.0.3",
       "files": [
@@ -13557,7 +13557,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\publi\\.nuget\\packages\\": {},
+    "C:\\Users\\sako01\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -13566,17 +13566,17 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "D:\\Development\\TransmissionApp\\src\\TransmissionApp.Api\\TransmissionApp.Api.csproj",
+      "projectUniqueName": "C:\\play\\TransmissionApp\\src\\TransmissionApp.Api\\TransmissionApp.Api.csproj",
       "projectName": "TransmissionApp.Api",
-      "projectPath": "D:\\Development\\TransmissionApp\\src\\TransmissionApp.Api\\TransmissionApp.Api.csproj",
-      "packagesPath": "C:\\Users\\publi\\.nuget\\packages\\",
-      "outputPath": "D:\\Development\\TransmissionApp\\src\\TransmissionApp.Api\\obj\\",
+      "projectPath": "C:\\play\\TransmissionApp\\src\\TransmissionApp.Api\\TransmissionApp.Api.csproj",
+      "packagesPath": "C:\\Users\\sako01\\.nuget\\packages\\",
+      "outputPath": "C:\\play\\TransmissionApp\\src\\TransmissionApp.Api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\publi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\sako01\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -13584,19 +13584,25 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "http://bkiev-payqa-app.betsson.local:4333/nuget/Betsson.Payments": {},
+        "http://bkiev-payqa-app.betsson.local:4333/nuget/Techsson": {},
+        "http://bkiev-payqa-app.betsson.local:4333/nuget/ThirdParties": {},
+        "https://api.nuget.org/v3/index.json": {},
+        "https://nuget-techsson.bde.local/nuget/Default/": {},
+        "https://nuget-techsson.bde.local/nuget/OBG": {},
+        "https://nuget-techsson.bde.local/nuget/Techsson.Public": {}
       },
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "D:\\Development\\TransmissionApp\\src\\TransmissionApp.Business.Logic\\TransmissionApp.Business.Logic.csproj": {
-              "projectPath": "D:\\Development\\TransmissionApp\\src\\TransmissionApp.Business.Logic\\TransmissionApp.Business.Logic.csproj"
+            "C:\\play\\TransmissionApp\\src\\TransmissionApp.Business.Logic\\TransmissionApp.Business.Logic.csproj": {
+              "projectPath": "C:\\play\\TransmissionApp\\src\\TransmissionApp.Business.Logic\\TransmissionApp.Business.Logic.csproj"
             },
-            "D:\\Development\\TransmissionApp\\src\\TransmissionApp.Api.Client.Contracts\\TransmissionApp.Api.Client.Contracts.csproj": {
-              "projectPath": "D:\\Development\\TransmissionApp\\src\\TransmissionApp.Api.Client.Contracts\\TransmissionApp.Api.Client.Contracts.csproj"
+            "C:\\play\\TransmissionApp\\src\\TransmissionApp.Api.Client.Contracts\\TransmissionApp.Api.Client.Contracts.csproj": {
+              "projectPath": "C:\\play\\TransmissionApp\\src\\TransmissionApp.Api.Client.Contracts\\TransmissionApp.Api.Client.Contracts.csproj"
             },
-            "D:\\Development\\TransmissionApp\\src\\TransmissionApp.TorrentClients\\TransmissionApp.TorrentClients.csproj": {
-              "projectPath": "D:\\Development\\TransmissionApp\\src\\TransmissionApp.TorrentClients\\TransmissionApp.TorrentClients.csproj"
+            "C:\\play\\TransmissionApp\\src\\TransmissionApp.TorrentClients\\TransmissionApp.TorrentClients.csproj": {
+              "projectPath": "C:\\play\\TransmissionApp\\src\\TransmissionApp.TorrentClients\\TransmissionApp.TorrentClients.csproj"
             }
           }
         }

@@ -6270,7 +6270,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\publi\\.nuget\\packages\\": {},
+    "C:\\Users\\sako01\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -6279,17 +6279,17 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "D:\\Development\\TransmissionApp\\src\\TransmissionApp.Api.Client\\TransmissionApp.Api.Client.csproj",
+      "projectUniqueName": "C:\\play\\TransmissionApp\\src\\TransmissionApp.Api.Client\\TransmissionApp.Api.Client.csproj",
       "projectName": "TransmissionApp.Api.Client",
-      "projectPath": "D:\\Development\\TransmissionApp\\src\\TransmissionApp.Api.Client\\TransmissionApp.Api.Client.csproj",
-      "packagesPath": "C:\\Users\\publi\\.nuget\\packages\\",
-      "outputPath": "D:\\Development\\TransmissionApp\\src\\TransmissionApp.Api.Client\\obj\\",
+      "projectPath": "C:\\play\\TransmissionApp\\src\\TransmissionApp.Api.Client\\TransmissionApp.Api.Client.csproj",
+      "packagesPath": "C:\\Users\\sako01\\.nuget\\packages\\",
+      "outputPath": "C:\\play\\TransmissionApp\\src\\TransmissionApp.Api.Client\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\publi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\sako01\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6297,7 +6297,13 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "http://bkiev-payqa-app.betsson.local:4333/nuget/Betsson.Payments": {},
+        "http://bkiev-payqa-app.betsson.local:4333/nuget/Techsson": {},
+        "http://bkiev-payqa-app.betsson.local:4333/nuget/ThirdParties": {},
+        "https://api.nuget.org/v3/index.json": {},
+        "https://nuget-techsson.bde.local/nuget/Default/": {},
+        "https://nuget-techsson.bde.local/nuget/OBG": {},
+        "https://nuget-techsson.bde.local/nuget/Techsson.Public": {}
       },
       "frameworks": {
         "netcoreapp2.0": {
