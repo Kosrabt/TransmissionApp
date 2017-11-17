@@ -1,34 +1,28 @@
-version: '3'
+version: '3.2'
 
 services:
-  transmissionapp.web:
-    image: transmissionapp.web
-    container_name: transmissionapp.web
-    build:
-      context: ./src/TransmissionApp.Web
-      dockerfile: Dockerfile
-    ports:
-      - "5000:80"
+  transmissionapp_web:
+    image: kosrabt/transmissionapp_web 
     depends_on:
-      - transmissionapp.api
+      - transmissionapp_api
     environment:
-      - "ApiUrl=http://transmissionapp.api"
+      - "ApiUrl=http://transmissionapp_api"
+    volumes:
+      - type: volume
+        source: config
+        target: /app/transmissionrss-config
+    
 
-  transmissionapp.api:
-    image: transmissionapp.api
-    container_name: transmissionapp.api
-    build:
-      context: ./src/TransmissionApp.Api
-      dockerfile: Dockerfile
-    ports:
-      - "5001:80" 
+  transmissionapp_api:
+    image: kosrabt/transmissionapp_api  
 
-  transmissionapp.runner:
-    image: transmissionapp.runner
-    build:
-      context: ./src/TransmissionApp.Runner
-      dockerfile: Dockerfile
+  transmissionapp_runner:
+    image: kosrabt/transmissionapp_runner   
     depends_on:
-      - transmissionapp.api
+      - transmissionapp_api
     environment:
-      - "ApiUrl=http://transmissionapp.api"
+      - "ApiUrl=http://transmissionapp_api"
+
+  
+volumes:
+  config:

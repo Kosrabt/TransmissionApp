@@ -1,6 +1,30 @@
-version: '3'
+version: '3.2'
+
+
 
 services:
-  transmissionapp.api:
+  transmissionapp_web:
+    build:
+      context: ./src/TransmissionApp.Web
+      dockerfile: Dockerfile
+    ports:
+      - "5000:80"   
+    environment:
+    - ASPNETCORE_ENVIRONMENT=Development   
+
+
+  transmissionapp_api:    
+    build:
+      context: ./src/TransmissionApp.Api
+      dockerfile: Dockerfile
+    ports:
+      - "5001:80" 
     environment:
       - ASPNETCORE_ENVIRONMENT=Development   
+
+  transmissionapp_runner:   
+    build:
+      context: ./src/TransmissionApp.Runner
+      dockerfile: Dockerfile  
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development          

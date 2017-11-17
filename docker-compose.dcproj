@@ -9,6 +9,8 @@
     <DockerServiceName>transmissionapp.web</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>
+    <None Include="docker-compose.override.arm.yml" />
+    <None Include="docker-compose.ci.build.arm.yml" />
     <None Include="docker-compose.ci.build.yml" />
     <None Include="docker-compose.override.yml">
       <DependentUpon>docker-compose.yml</DependentUpon>
